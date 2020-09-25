@@ -89,7 +89,7 @@ def main():
     numberOfDots=350
     #                               numbers,dots
     makeCircle(circleSize,numberOfDots,False,False)  # set True to false if you do't need numbers or dots
-    generateTimeTables(350) # input the multiplier
+    generateTimeTables(70) # input the multiplier
 
 
 
