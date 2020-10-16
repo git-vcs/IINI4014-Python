@@ -106,7 +106,7 @@ class Dice:
     # debug method for printing all values in the class
     def tostring(self):
         print("x-Coordinate:",self.xCoordinate,"y-Coordinate:",self.yCoordinate)
-        print("Dice size:",self.size)
+        print("Dice size:",self.dicesize)
         print("Color:",self.dicecollorvaliue)
         print("Dice Valiue:",self.currentdicevaliue)
         print("Dice Color",self.dicecollorvaliue)
@@ -139,6 +139,8 @@ def main():
     dice.setdicecolor("white")
     dice.setdotcolor("yellow")
     # Binding method to the canvas to be called on a click event
+
+    dice.tostring()
     canvas.bind("<Button-1>",click)
     canvas.pack()
     root.mainloop()
