@@ -4,16 +4,13 @@ An advanced Circle Analytics Company
 '''
 
 # this code is transcribed from the following youtube video:
-# https://www.youtube.com/watch?v=HTLu2DFOdTg
+# https://www.youtube.com/watch?v=HTLu2DFOdTg with timestamps
 import math         # module for code reuse
-#25:58
-import datetime
+# 25:58
 from random import random, seed
 
 class Circle(object):       # new-style class
-
     'An advanced circle analytic toolkit'
-
     #42:41
     # Flyweigth design pattern supresses
     # the instance ditionary
@@ -21,9 +18,7 @@ class Circle(object):       # new-style class
 
     version = '0.7'     # class variable
 
-
-    # Init isn’t a constructor. It’s job is to initialize the instance variable
-    # the job of the initializer is to populate empty instance
+    # init isn’t a constructor. It’s job is to initialize the instance variable
     def __init__(self, radius):
         self.radius = radius              # instance variable
 
@@ -44,7 +39,7 @@ class Circle(object):       # new-style class
         'Preform quadrature on a shape of uniform radius'
         # 34:27
         # Goverment request: iso-111110
-        p = self.__perimeter()      #37:07 #todo her mangler det noe
+        p = self.__perimeter()      # 37:07
         r = p / math.pi / 2.0
         # 10:46
         return math.pi * r ** 2.0
@@ -57,7 +52,7 @@ class Circle(object):       # new-style class
     # keeps a spare copy of the function in case someone overrides it
     _Circle__perimeter = perimeter
 
-   #27:49
+    # 27:49
     # Alternative constructor need to anticipate subclassing
     @classmethod        # alternative constructor for class methode
     def from_bbd(cls,bbd):
@@ -65,24 +60,23 @@ class Circle(object):       # new-style class
         radius = bbd / 2.0 / math.sqrt(2.0)
         return cls(radius)
 
-    #30:13
+    # 30:13
     # a function where you don’t need the self instance
     @staticmethod           # attach function to classes
     def angle_to_grade(angle):
-        'Convert angle in degree to a precantage grade'
+        'Convert angle in degree to a percentage grade'
         return math.tan(math.radians(angle)) * 100.0
-
 
 
 # 22:00
 class Tire(Circle):
-    'Tires are circles with a corrected perimiter'
+    'Tires are circles with a corrected perimeter'
 
-    def perimiter(self):
+    def perimeter(self):
         'Circumference corrected for the rubber'
         return Circle.perimeter(self) * 1.25
 
-    _Tier_preimeter = perimiter
+    _Tier_preimeter = perimeter
 
 
 
@@ -128,11 +122,11 @@ def rubbersheetcompany():
 # 19:45
 def nationaltirechain():
     print("National tire chain")
-    #29:15
+    # 29:15
     t = Tire.from_bbd(45)
     print('A tire of radius',t.radius)
     print('has a inner area of',t.radius)
-    print('and an odometer corrected perimiter of')
+    print('and an odometer corrected perimeter of')
     print(t.perimeter())
     print()
 
