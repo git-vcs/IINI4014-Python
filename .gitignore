@@ -6,3 +6,5 @@
 *.tar.gz
 *.gz
 *.exe
+*debug*
+*test*
