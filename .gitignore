@@ -8,3 +8,4 @@
 *.exe
 *debug*
 *test*
+*.ipynb_checkpoints*
